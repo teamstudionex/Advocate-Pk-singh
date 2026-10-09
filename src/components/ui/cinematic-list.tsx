@@ -88,16 +88,19 @@ export function CinematicListItem({
             )}
 
             {/* Category note on mobile */}
-            <span className="block text-[0.6875rem] font-medium uppercase tracking-wider text-[#6B6A65] group-hover:text-[#ECEAE5] md:hidden mt-1">
+            <span className="block text-[0.6875rem] font-medium text-[#6B6A65] group-hover:text-[#ECEAE5] md:hidden mt-1">
               {category}
             </span>
           </div>
         </div>
 
+        {/* Leader line guiding the eye across the row on large screens */}
+        <div className="hidden lg:block flex-1 mx-4 sm:mx-6 border-b border-dotted border-[#DAD8D2]/80 group-hover:border-white/30 transition-colors" />
+
         {/* Right Side: Category Badge & Action */}
-        <div className="flex items-center gap-2 sm:gap-4 md:gap-8 shrink-0 ml-2">
-          {/* Category: Slides in smoothly on desktop */}
-          <span className="hidden text-xs sm:text-sm font-medium uppercase tracking-widest text-[#6B6A65] transition-all duration-500 group-hover:text-[#F6F5F2] md:block">
+        <div className="flex items-center gap-3 sm:gap-4 md:gap-6 shrink-0 ml-2">
+          {/* Category: Title/sentence case without long uppercase run */}
+          <span className="hidden text-xs sm:text-sm font-medium text-[#6B6A65] transition-all duration-500 group-hover:text-[#F6F5F2] md:block">
             {category}
           </span>
 
