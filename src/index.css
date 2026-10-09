@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+:root {
+  /* neutrals */
+  --ink: #0C0C0B;
+  --ink-2: #1A1A18;
+  --paper: #F6F5F2;
+  --paper-2: #ECEAE5;
+  --white: #FFFFFF;
+  --muted: #6B6A65;
+  --line: #DAD8D2;
+  --on-dark: #F6F5F2;
+  --muted-dark: #A9A79F;
+  --line-dark: rgba(246, 245, 242, 0.16);
+
+  /* deep forest green: the only accent colour */
+  --forest: #1F3D2F;
+  --forest-2: #2A5240;
+
+  /* typography fonts */
+  --font-heading: "Clash Grotesk", "Inter Tight", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-hindi: "Noto Sans Devanagari", sans-serif;
+}
+
+@theme {
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-white: var(--white);
+  --color-muted: var(--muted);
+  --color-muted-dark: var(--muted-dark);
+  --color-line: var(--line);
+  --color-line-dark: var(--line-dark);
+  --color-on-dark: var(--on-dark);
+  --color-forest: var(--forest);
+  --color-forest-2: var(--forest-2);
+
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-hindi: var(--font-hindi);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--paper);
+  color: var(--ink-2);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Accessible focus styling */
+:focus-visible {
+  outline: 2px solid var(--forest) !important;
+  outline-offset: 3px !important;
+}
+
+/* Headings and Balance */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+  text-wrap: balance;
+  letter-spacing: -0.03em;
+}
+
+.font-hindi {
+  font-family: var(--font-hindi);
+}
+
+/* Tabular figures for alignment */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Section scroll margin for smooth navigation with floating pill bar */
+section, [id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* Global photo grade treatment */
+.photo-grade {
+  filter: grayscale(0.35) contrast(1.05);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s ease;
+}
+
+/* Advocate portrait special grade */
+.advocate-grade {
+  filter: grayscale(0.2) contrast(1.02);
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s ease;
+}
+
+/* Text limits for editorial clarity */
+.max-prose-editorial {
+  max-width: 65ch;
+}
+
+/* Marquee infinite scroll */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Image progressive blur-up shimmer animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.8s infinite ease-in-out;
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 38s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

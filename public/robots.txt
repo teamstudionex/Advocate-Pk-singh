@@ -1,0 +1,20 @@
+# robots.txt for Advocate Pravesh Kumar Singh (High Court at Allahabad)
+# Optimized for Google Search and Google Image Indexing
+
+User-agent: *
+Allow: /
+Allow: /sitemap.xml
+Allow: /favicon.svg
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Canonical Sitemaps
+Sitemap: https://ais-pre-tt6o2g7lkrzlruhfq7p7ca-399416534241.asia-east1.run.app/sitemap.xml
+Host: https://ais-pre-tt6o2g7lkrzlruhfq7p7ca-399416534241.asia-east1.run.app/
