@@ -49,16 +49,8 @@ export const Skiper31 = () => {
   return (
     <div
       ref={targetRef}
-      className="w-full bg-[#ECEAE5] overflow-hidden border-t border-[#DAD8D2] relative box-border flex flex-col items-center justify-center py-10 sm:py-20 md:py-28 px-4 sm:px-8"
+      className="w-full bg-[#ECEAE5] overflow-hidden border-t border-[#DAD8D2] relative box-border flex flex-col items-center justify-center py-8 sm:py-14 md:py-20 px-4 sm:px-8"
     >
-      {/* Editorial Pill */}
-      <div className="mb-3.5 sm:mb-6 flex items-center gap-2 px-3 py-1 rounded-full bg-[#F6F5F2] border border-[#DAD8D2] shadow-2xs">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#1F3D2F]" />
-        <span className="text-[0.6875rem] sm:text-xs uppercase tracking-widest text-[#6B6A65] font-medium">
-          Seat of Judicature • Est. 1866
-        </span>
-      </div>
-
       {/* Kinetic Text Reveal: Words grouped in whitespace-nowrap spans */}
       <div
         className="w-full max-w-6xl text-center text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase tracking-tight text-[#1A1A18] font-heading"
@@ -89,10 +81,6 @@ export const Skiper31 = () => {
           })}
         </div>
       </div>
-
-      <p className="mt-3 sm:mt-5 text-[0.75rem] sm:text-sm text-[#6B6A65] tracking-wide text-center max-w-[42ch] px-2 leading-relaxed">
-        Constitutional & Appellate Jurisdictions • High Court of Judicature at Allahabad
-      </p>
     </div>
   );
 };

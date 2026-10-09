@@ -85,14 +85,14 @@ export function Process() {
                   }}
                   className={cn(
                     "py-2.5 sm:py-8 md:py-12 transition-opacity duration-500 flex flex-row gap-3 sm:gap-10 items-start",
-                    isActive ? "opacity-100" : "opacity-40 hover:opacity-80"
+                    isActive ? "opacity-100" : "opacity-80 hover:opacity-100"
                   )}
                 >
-                  {/* Step Numeral: compact on mobile */}
+                  {/* Step Numeral: clear visual anchor with strong contrast */}
                   <span
                     className={cn(
                       "font-heading text-[1.4rem] sm:text-[3rem] md:text-[4rem] font-medium leading-none shrink-0 tabular-nums transition-colors duration-400 select-none",
-                      isActive ? "text-[#1F3D2F]" : "text-[#DAD8D2]"
+                      isActive ? "text-[#1F3D2F]" : "text-[#7C7A73]"
                     )}
                   >
                     {step.number}

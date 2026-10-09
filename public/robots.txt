@@ -16,5 +16,5 @@ User-agent: Bingbot
 Allow: /
 
 # Canonical Sitemaps
-Sitemap: https://ais-pre-tt6o2g7lkrzlruhfq7p7ca-399416534241.asia-east1.run.app/sitemap.xml
-Host: https://ais-pre-tt6o2g7lkrzlruhfq7p7ca-399416534241.asia-east1.run.app/
+Sitemap: https://advocate-pk-singh.vercel.app/sitemap.xml
+Host: https://advocate-pk-singh.vercel.app/

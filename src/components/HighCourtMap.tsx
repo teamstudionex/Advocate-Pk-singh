@@ -117,12 +117,13 @@ export function HighCourtMap() {
                 <button
                   type="button"
                   onClick={() => setIsInteractive(!isInteractive)}
-                  className="pointer-events-auto inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-[#0C0C0B]/85 hover:bg-[#0C0C0B] backdrop-blur-md text-[#F6F5F2] border border-[rgba(246,245,242,0.2)] text-[0.6875rem] sm:text-[0.8125rem] font-medium transition-all shadow-sm cursor-pointer select-none shrink-0"
+                  className="pointer-events-auto inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-[#0C0C0B]/85 hover:bg-[#0C0C0B] backdrop-blur-md text-[#F6F5F2] border border-[rgba(246,245,242,0.2)] text-[0.6875rem] sm:text-[0.8125rem] font-medium transition-all shadow-sm cursor-pointer select-none shrink-0 focus-visible:outline-2 focus-visible:outline-[#1F3D2F]"
                   aria-pressed={isInteractive}
+                  aria-label={isInteractive ? "Lock map view and disable pan/zoom gestures" : "Enable interactive map pan and zoom"}
                 >
                   <Layers className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-emerald-400" />
                   <span>
-                    {isInteractive ? "Cinematic Tone" : "Interact"}
+                    {isInteractive ? "Lock Map View" : "Enable Interactive Map"}
                   </span>
                 </button>
               </div>
